@@ -34,14 +34,14 @@
 <style>
   *{
     font-family: Helvetica;
-    padding: 0;
-    margin: 0;
+    padding: 0 auto;
+    margin: 0 auto;
     box-sizing: border-box;
   }
 
   .main-container{
     margin: 50px;
-    min-height: 250px;
+    min-height: 1px;
   }
 
   h1{

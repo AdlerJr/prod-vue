@@ -10,15 +10,15 @@
       <!-- Login Form -->
       <form>
         <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-        <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+        <input type="text" id="password" class="fadeIn third" name="login" placeholder="senha">
         
-          <button id="submit-btn" @click="$emit('fazerLogin')"><router-link to="/home" >Entrar</router-link></button>
+          <button id="submit-btn" @click="$emit('fazerLogin')"><router-link to="/home" ><div id="submit-text">Entrar</div></router-link></button>
       
       </form>
 
       <!-- Remind Passowrd -->
       <div id="formFooter">
-        <a class="underlineHover" href="#">Forgot Password?</a>
+        <a class="underlineHover" href="#">Esqueceu a senha?</a>
       </div>
 
     </div>
@@ -45,9 +45,17 @@ export default{
 <style scoped>
 
 #p{
+      
+
         display: flex;
-        flex-direction: column;
+        
         align-items: center;
+        background-image: url('https://pbs.twimg.com/media/E9-NiJRXEAEnYmt?format=jpg&name=4096x4096');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: 50% 50%;
+        width: 100vw;
+        height: 500px;
     }
 
 label {
@@ -59,19 +67,28 @@ label {
   }
 
 #submit-btn {
-    background-color: #39ace7;
+    background-color: #fcba03;
     color:#fcba03;
     font-weight: bold;
-    border: 2px  #222;
+    border: 2px #222;
     padding: 10px;
     font-size: 16px;
     margin: 0 auto;
+    margin-bottom: 4px;
     cursor: pointer;
     transition: .5s;
+    border-radius: 5px 5px 5px 5px;
   }
   #submit-btn:hover {
     background-color: transparent;
-    color: #222;
+    color: rgba(34, 34, 34, 0.438);
+  }
+  #submit-text {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+  }
+  #submit-text:hover {
+    color: #fcba03;
   }
 
 
@@ -79,11 +96,14 @@ label {
 
 html {
   background-color: #56baed;
+  
 }
 
 body {
+  
   font-family: "Poppins", sans-serif;
   height: 100vh;
+  
 }
 
 a {
@@ -120,7 +140,7 @@ h2 {
 #formContent {
   -webkit-border-radius: 10px 10px 10px 10px;
   border-radius: 10px 10px 10px 10px;
-  background: #92badd;
+  background: #222;
   padding: 30px;
   width: 90%;
   max-width: 450px;
@@ -129,6 +149,8 @@ h2 {
   -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
   box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
   text-align: center;
+
+  margin-top: 10%;
 }
 
 #formFooter {
@@ -140,6 +162,10 @@ h2 {
   border-radius: 0 0 10px 10px;
 }
 
+#formFooter a{
+  text-decoration: none;
+  color: black;
+}
 
 
 /* TABS */
@@ -158,7 +184,7 @@ h2.active {
 /* FORM TYPOGRAPHY*/
 
 input[type=button], input[type=submit], input[type=reset]  {
-  background-color: #56baed;
+  background-color: rgb(0, 0, 0);
   border: none;
   color: white;
   padding: 15px 80px;
@@ -167,8 +193,8 @@ input[type=button], input[type=submit], input[type=reset]  {
   display: inline-block;
   text-transform: uppercase;
   font-size: 13px;
-  -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
-  box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+  -webkit-box-shadow: 0 10px 30px 0 rgba(255, 137, 3, 0.452);
+  box-shadow: 0 10px 30px 0 rgba(255, 137, 3, 0.692);
   -webkit-border-radius: 5px 5px 5px 5px;
   border-radius: 5px 5px 5px 5px;
   margin: 5px 20px 40px 20px;
@@ -180,7 +206,7 @@ input[type=button], input[type=submit], input[type=reset]  {
 }
 
 input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
-  background-color: #39ace7;
+  background-color: rgb(34, 34, 34);
 }
 
 input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
